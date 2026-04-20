@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('fonts/static/HankenGrotesk-VariableFont_wgth.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk Bold';
+    src: url('fonts/static/HankenGrotesk-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* --- Primary Colors --- */
+  --color-light-red: hsl(0, 100%, 67%);
+  --color-orangey-yellow: hsl(39, 100%, 56%);
+  --color-green-teal: hsl(166, 100%, 37%);
+  --color-cobalt-blue: hsl(234, 85%, 45%);
+
+  /* --- Gradients --- */
+  /* Background Gradient */
+  --gradient-bg-light-slate-blue: hsl(252, 100%, 67%);
+  --gradient-bg-light-royal-blue: hsl(241, 81%, 54%);
+
+  /* Circle Gradient */
+  --gradient-circle-violet-blue: hsla(256, 72%, 46%, 1);
+  --gradient-circle-persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* --- Neutral Colors --- */
+  --color-white: hsl(0, 0%, 100%);
+  --color-pale-blue: hsl(221, 100%, 96%);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-dark-gray-blue: hsl(224, 30%, 27%);
+}
+body{
+    background-color: var(--color-pale-blue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+#back{
+    width: 640px;
+    height: 450px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 640px;
+    position: relative;
+    box-shadow: 9px 10px 36px -3px rgba(0, 0, 0, 0.63);
+    border-radius: 20px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 60px;
+}
+ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 250px;
+    height: 45px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+ul .text{
+    font-size: 15px;
+    padding-left: 10px;
+    position: relative;
+    right: 40px;
+    
+}
+.rec{
+    background-color: hsl(0, 100%, 67%, 0.1);
+    display: flex;
+    justify-content: flex-start;
+}
+.rec .text{
+    color: var(--color-light-red);
+}
+.mem .text{
+    color: var(--color-orangey-yellow);
+}
+.ver .text{
+    color: var(--color-green-teal);
+    padding: 0px;
+
+}
+.vis .text{
+    color: var(--color-cobalt-blue);
+    padding: 0px;
+}
+.mem{
+    background-color: hsl(39, 100%, 56%, 0.1);
+}
+.ver{
+    
+    background-color: hsl(166, 100%, 37%, 0.1);
+}
+.vis{
+    background-color: hsl(234, 85%, 45%, 0.1);
+}
+.main-side{
+    background: linear-gradient(var(--gradient-bg-light-slate-blue), var(--gradient-bg-light-royal-blue));
+    color: var(--color-white);
+    height: 450px;
+    width: 320px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 35px 20px;
+    text-align: center;
+
+}
+.summary-side{
+    background-color: var(--color-white);
+    height: 450px;
+    width: 320px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 30px 20px;
+
+}
+#res{
+    display: flex;
+    position: absolute;
+    bottom: 390px;
+    color: var(--color-light-lavender);
+    font-size: 17px;
+    margin: 6px;
+    margin-bottom: 10px;
+}
+.percent{
+    background: linear-gradient(var(--gradient-circle-violet-blue), var(--gradient-circle-persian-blue));
+    height: 170px;
+    width: 170px;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.percent h2{
+    font-size: 60px;
+}
+.percent h3{
+    color: var(--color-light-lavender);
+    opacity: 0.6;
+    font-size: 14px;
+}
+.main-text2{
+    position: relative;
+    bottom: 10px;
+    opacity: 0.6;
+    font-size: 18px;
+
+}
+.main-text1{
+    position: relative;
+    bottom: 30px;
+}
+.summary-side h3{
+    position: absolute;
+    align-self: self-start;
+    bottom: 400px;
+}
+button{
+    position: relative;
+    width: 100%;
+    padding: 17px;
+    margin-top: 70px;
+    background-color: hsla(224, 29%, 27%, 1);
+    color: var(--color-white);
+    border-radius: 25px;
+    font-weight: bold;
+    bottom: 35px;
+    border: none;
+    transition: all 0.8s;
+}
+img{
+    margin: 0px;
+    display: flex;
+    width:20px;
+    height: 20px;
+    object-fit: cover;
+}
+span{
+    opacity: 0.6;
+}
+button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
